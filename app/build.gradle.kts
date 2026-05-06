@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.counter"
+        applicationId = "com.example.zifzafnews"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -52,7 +52,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    
+    implementation(libs.androidx.material3)
+
+    // Basic icons
+    implementation("androidx.compose.material:material-icons-core")
+    // Extended icons (this is where Refresh usually lives)
+    implementation("androidx.compose.material:material-icons-extended")
+
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
@@ -73,3 +79,12 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        freeCompilerArgs.add("-opt-in=androidx.compose.material3.ExperimentalMaterial3Api")
+    }
+}
+
+

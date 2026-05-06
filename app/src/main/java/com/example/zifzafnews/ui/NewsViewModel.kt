@@ -22,7 +22,7 @@ class NewsViewModel @Inject constructor(
         fetchNews()
     }
 
-    private fun fetchNews() {
+    fun fetchNews() {
         viewModelScope.launch {
             val news = repository.fetchLatestNews()
             _newsState.value = news

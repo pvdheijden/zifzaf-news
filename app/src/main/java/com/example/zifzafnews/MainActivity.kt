@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.ui.Modifier
-import com.example.zifzafnews.ui.theme.CounterTheme
+import com.example.zifzafnews.ui.theme.ZifZafNewsTheme
 import com.example.zifzafnews.ui.NewsScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CounterTheme {
+            ZifZafNewsTheme {
                 NewsScreen(
                     modifier = Modifier
                         .fillMaxSize()
