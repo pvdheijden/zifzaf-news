@@ -8,7 +8,7 @@ class NewsRepository @Inject constructor(
 ) {
     suspend fun fetchLatestNews(): List<NewsItem> {
         return try {
-            val response = apiService.getNews("Hacking and dark web news")
+            val response = apiService.getNews("Tech news")
             response.newsItems
         } catch (e: Exception) {
             emptyList() // In a real app, handle errors properly!

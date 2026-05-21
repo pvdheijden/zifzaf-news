@@ -15,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Counter">
         <activity
-            android:name=".MainActivity"
+            android:name=".NewsItemActivity"
+            android:exported="false"
+            android:label="@string/title_activity_news_item"
+            android:theme="@style/Theme.Counter" />
+        <activity
+            android:name=".NewsActivity"
             android:exported="true"
             android:theme="@style/Theme.Counter">
             <intent-filter>

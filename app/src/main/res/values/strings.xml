@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ZifZaf News</string>
     <string name="webz_apikey">833d6c04-cf2a-4a23-87fd-df9fa9bc3805</string>
+    <string name="title_activity_news_item">NewsItemActivity</string>
 </resources>
